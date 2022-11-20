@@ -9,9 +9,10 @@ def frequency_of_pitch(pitch):  # pitch is midi note number for specific pitch l
     global MIDI_NOTE_NUMBER_OF_A4, FREQUENCY_OF_MIDI_NOTE_A4, NOTES_PER_OCTAVE
     return 2 ** ((pitch - MIDI_NOTE_NUMBER_OF_A4) / NOTES_PER_OCTAVE) * FREQUENCY_OF_MIDI_NOTE_A4 
 
+
+# lambda function
 frequency = lambda midi_note_number: 2 ** ((midi_note_number - 69) / 12) * 440 
 
-frequency(81)
 
 
 if __name__ == "__main__":
